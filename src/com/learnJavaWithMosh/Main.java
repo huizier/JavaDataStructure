@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Array numbers = new Array(3);
+        /*Array numbers = new Array(3);
         System.out.println(numbers.max());
         numbers.insert(10);
         numbers.insert(20);
@@ -42,8 +42,8 @@ public class Main {
 
         Array other = new Array(3);
         other.insert(40);
-        /*other.insert(20);
-        other.insert(30);*/
+        *//*other.insert(20);
+        other.insert(30);*//*
         other.print();
         System.out.println("^^^^^");
         numbers.intersect(other);
@@ -65,7 +65,44 @@ public class Main {
         listB.add(30);
 
         listA.retainAll(listB);
-        System.out.println(listA);
+        System.out.println(listA);*/
 
+        // Mosh: Use the standard java implementation to see how a specific case is handled
+        //Exception in thread "main" java.util.NoSuchElementException
+        //	at java.base/java.util.LinkedList.removeFirst(LinkedList.java:274)
+        //	at com.learnJavaWithMosh.Main.main(Main.java:73)
+        // This is a deliberate error handling, different from a NullPointerException
+        /*java.util.LinkedList<String> x = new java.util.LinkedList<>();
+        x.removeFirst();*/
+
+        LinkedList list = new LinkedList();
+        list.print();
+        System.out.println(list.size());
+        System.out.println(Arrays.toString(list.toArray()));
+        list.addLast(20);
+        list.addLast(30);
+        list.addLast(40);
+        list.addLast(50);
+        list.addFirst(10);
+        list.print();
+        System.out.println();
+        list.deleteLast();
+        list.print();
+        System.out.println();
+        list.deleteFirst();
+        list.print();
+        System.out.println();
+        System.out.println(list.contains(20));
+        System.out.println(list.contains(50));
+        System.out.println(list.indexOf(40));
+        System.out.println(list.indexOf(0));
+        System.out.println(list.size());
+        System.out.println(Arrays.toString(list.toArray()));
+        list.reverse();
+        System.out.println(Arrays.toString(list.toArray()));
+        System.out.println(list.getKthFromTheEnd(0));
+        list.printMiddle();
+        var listA = LinkedList.createWithLoop();
+        System.out.println(listA.hasLoop());
     }
 }
