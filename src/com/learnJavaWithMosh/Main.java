@@ -75,7 +75,7 @@ public class Main {
         /*java.util.LinkedList<String> x = new java.util.LinkedList<>();
         x.removeFirst();*/
 
-        LinkedList list = new LinkedList();
+       /* LinkedList list = new LinkedList();
         list.print();
         System.out.println(list.size());
         System.out.println(Arrays.toString(list.toArray()));
@@ -103,6 +103,101 @@ public class Main {
         System.out.println(list.getKthFromTheEnd(0));
         list.printMiddle();
         var listA = LinkedList.createWithLoop();
-        System.out.println(listA.hasLoop());
+        System.out.println(listA.hasLoop());*/
+
+        /*//------------ String Reverser ------------
+        String str = "";
+        // Define reverse as a static function
+        //System.out.println(StringReverser.reverse(str));
+
+        // Define reverse as a normal function
+        StringReverser reverser = new StringReverser();
+        var result = reverser.reverse(str);
+        System.out.println(result);
+
+        //------------ Balanced String ------------
+        // Mosh: Edge cases
+        // (
+        // (()
+        // )(
+        // Me:
+        // no brackets
+        // empty
+        // null
+        Expression exp = new Expression("{1 + 2}");
+        System.out.println(exp.isBalanced());*/
+
+       /* //------------Stack Implementation------------
+        Stack stack = new Stack(5);
+        System.out.println(stack);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
+        System.out.println(stack.isEmpty());
+        System.out.println(stack);
+
+        StackUsingLinkedList stk = new StackUsingLinkedList();
+        System.out.println(stk);
+        stk.push(1);
+        stk.push(2);
+        System.out.println(stk);
+        stk.pop();
+        System.out.println(stk.peek());
+        stk.pop();
+        System.out.println(stk.isEmpty());*/
+
+        /*//------------Two Stacks------------
+        TwoStacks stack = new TwoStacks(5);
+        System.out.println(stack.isEmpty1());
+        System.out.println(stack.isEmpty2());
+        stack.push1(0);
+        stack.push2(4);
+        stack.push1(1);
+        System.out.println(stack);
+        System.out.println(stack.isEmpty1());
+        System.out.println(stack.isEmpty2());
+        System.out.println(stack.isFull1());
+        System.out.println(stack.isFull2());
+        stack.push1(2);
+        stack.push1(3);
+        System.out.println(stack);
+        System.out.println(stack.isFull1());
+        System.out.println(stack.isFull2());
+        stack.pop2();
+        System.out.println(stack);
+        System.out.println(stack.isEmpty2());
+        stack.pop2();*/
+
+        MinStack stack = new MinStack();
+        stack.push(3);
+        System.out.println(stack.min());
+        stack.push(2);
+        System.out.println(stack.min());
+        stack.push(5);
+        System.out.println(stack.min());
+        stack.push(1);
+        System.out.println(stack.min());
+        stack.push(1);
+        System.out.println(stack.min());
+        System.out.println();
+        stack.pop();
+        System.out.println(stack.min());
+        stack.pop();
+        System.out.println(stack.min());
+        stack.pop();
+        System.out.println(stack.min());
+        stack.pop();
+        System.out.println(stack.min());
+        stack.pop();
+        System.out.println(stack.min());
+        stack.pop();
     }
 }
